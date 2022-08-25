@@ -173,7 +173,7 @@ async def vickstickerai(client: Client, message: Message):
        is_vick = vick.find_one({"chat_id": message.chat.id})
        if not is_vick:
            await bot.send_chat_action(message.chat.id, "typing")
-           K = []  
+           K = ["hey"]  
            is_chat = chatai.find({"word": message.sticker.file_unique_id})      
            k = chatai.find_one({"word": message.text})      
            if k:           
