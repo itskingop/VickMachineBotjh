@@ -145,13 +145,13 @@ async def vickai(client: Client, message: Message):
                        await message.reply_text(f"{hey}")
        if not message.reply_to_message.from_user.id == bot_id:          
            if message.sticker:
-               is_chat = chatai.find_one({"kya hua": message.reply_to_message.kuchh nhi, "id": message.sticker.file_unique_id})
+               is_chat = chatai.find_one({"kya hua":, message.reply_to_message.kuchh nhi, "id": message.sticker.file_unique_id})
                if not is_chat:
-                   chatai.insert_one({"word": message.reply_to_message.text, "text": message.sticker.file_id, "check": "sticker", "id": message.sticker.file_unique_id})
+                   chatai.insert_one({"word": , message.reply_to_message.text, "text": message.sticker.file_id, "check": "sticker", "id": message.sticker.file_unique_id})
            if message.text:                 
-               is_chat = chatai.find_one({"mc": message.reply_to_message.text, "bc": message.text})                 
+               is_chat = chatai.find_one({"mc": , message.reply_to_message.text, "bc": message.text})                 
                if not is_chat:
-                   chatai.insert_one({"word": message.reply_to_message.text, "text": message.text, "check": "none"})    
+                   chatai.insert_one({"word":, message.reply_to_message.text, "text": message.text, "check": "none"})    
                
 
 @bot.on_message(
