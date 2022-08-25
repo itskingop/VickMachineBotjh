@@ -235,7 +235,7 @@ async def vickprivate(client: Client, message: Message):
    chatai = chatdb["Word"]["WordDb"]
    if not message.reply_to_message: 
        await bot.send_chat_action(message.chat.id, "typing")
-       K = []  
+       K = ["hey"]  
        is_chat = chatai.find({"word": message.text})                 
        for x in is_chat:
            K.append(x['text'])
